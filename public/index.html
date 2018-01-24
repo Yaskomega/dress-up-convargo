@@ -6,19 +6,53 @@
     <link rel="stylesheet" href="foundation-6.4.2/css/app.css">
   </head>
   <body>
-    <div id="trucker">
-      <input class="name" type="text" placeholder="Trucker name"/>
-      <input class="price-by-km" type="number" placeholder="Price by km"/>
-      <input class="price-by-cubic" type="number" placeholder="Price by m3"/>
-    </div>
-    <div id="shipper">
-      <input class="name" type="text" placeholder="Shipper name"/>
-      <input class="distance" type="number" placeholder="Distance in km"/>
-      <input class="volume" type="number" placeholder="Volume in m3"/>
-      <input class="option" type="checkbox" placeholder="Deductible option"/>
-    </div>
-    <button id="compute">Compute</button>
+	<div id="trucker" class="grid-x grid-padding-x">
+		<div class="large-4 medium-4 cell">
+			<label>Trucker name</label>
+			<input class="name" type="text" placeholder="Trucker name"/>
+		</div>
+		<div class="large-4 medium-4 cell">
+			<label>Price by km</label>
+			<input class="price-by-km" type="number" placeholder="Price by km"/>
+		</div>
+		<div class="large-4 medium-4 cell">
+			<label>Price by m3</label>
+			<input class="price-by-cubic" type="number" placeholder="Price by m3"/>
+		</div>
+	</div>
+	<div id="shipper" class="grid-x grid-padding-x">
+		<div class="large-3 medium-3 cell">
+			<label>Shipper name</label>
+			<input class="name" type="text" placeholder="Shipper name"/>
+		</div>
+		<div class="large-3 medium-3 cell">
+			<div class="grid-x">
+			<label>Distance in km</label>
+			<div class="input-group">
+				<input class="distance input-group-field" type="number" placeholder="Distance in km"/>
+				<span class="input-group-label">km</span>
+			</div>
+			</div>
+		</div>
+		<div class="large-3 medium-3 cell">
+			<div class="grid-x">
+			<label>Volume in m3</label>
+			<div class="input-group">
+				<input class="volume input-group-field" type="number" placeholder="Volume in m3"/>
+				<span class="input-group-label">m3</span>
+			</div>
+			</div>
+		</div>
+		<div class="large-3 medium-3 cell">
+			<input id="deductible_option" class="option" type="checkbox" placeholder="Deductible option"/>
+			<label for="deductible_option">Deductible option</label>
+		</div>
+	</div>
+    <button id="compute" class="button">Compute</button>
     <div id="actors"></div>
+	
+
+
     <script src="convargo.js"></script>
     <script src="index.js"></script>
   </body>
